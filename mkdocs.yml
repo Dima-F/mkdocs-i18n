@@ -1,0 +1,44 @@
+site_name: MKDOCS+I18N
+theme: 
+  name: material
+  features:
+    - content.code.copy
+  palette:
+    primary: blue
+nav:
+  - Introdaction: index.md
+  - Tutorial:
+    - Sub tutorial: pages/tutorial/tutorial_subsection.md
+  - About: pages/about.md
+  - Faq: pages/faq.md
+plugins:
+  - search:
+      lang: 
+        - en
+        - ru
+        - uk
+  - i18n:
+      default_language: en
+      languages:
+        en: english
+        ru: русский
+        uk: українська
+      nav_translations:
+        ru:
+          About: Об сайте
+          Faq: Часто зад. вопр
+          Tutorial: Практикум
+          Sub tutorial: Практическое упражнение
+          Introdaction: Вступление
+        uk:
+          About: Про сайт
+          Faq: Часто задані питання
+          Tutorial: Практика
+          Sub tutorial: Практична вправа
+          Introdaction: Вступ
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.superfences
+
+
